@@ -6,5 +6,19 @@
   </head>
   <body>
       <img src="images/image1.jpg" id="image1"/>
+      
+      <script type="text/javascript">
+      
+      var img = document.getElementById('image1'); 
+
+      img.onmouseover = function(){
+      	img.style.border = "3px solid red"
+      }; 
+
+      img.onmouseout = function(){
+      	img.style.border = "none"
+      };
+
+      </script>
   </body>
 </html>

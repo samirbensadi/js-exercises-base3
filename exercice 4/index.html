@@ -8,7 +8,31 @@
   <form>
     <label for="motdepasse">Votre mot de passe : </label><input type="text" name="motdepasse" value="" id="motdepasse" />
     <label for="confirmation">Confirmez : </label><input type="text" name="confirmation" value="" id="confirmation" />
-    <button type="button" name="button" >Vérification</button>
+    <button onclick="Valid()" type="button" name="button" >Vérification</button>
   </form>
+
+  <script type="text/javascript">
+  	
+  	var mdp = document.getElementById('motdepasse'); 
+  	var confirm = document.getElementById('confirmation'); 
+
+  	var validation = document.getElementsByTagName('button');
+
+   	function Valid(){
+  		
+  		if (mdp.value == confirm.value) 
+  		{
+  			mdp.style.border = "1px green solid";
+    		confirm.style.border = "1px green solid";
+  		}
+  		else
+  		{
+    		mdp.style.border = "1px red solid";
+    		confirm.style.border = "1px red solid";
+		}
+  	};
+
+
+  </script>
 </body>
 </html>
